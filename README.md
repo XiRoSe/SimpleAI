@@ -84,6 +84,47 @@ team = SimpleCollaborate([analyst, writer])
 result = team.execute("Analyze Q4 sales data and write executive summary")
 ```
 
+## 💻 CLI Interface
+
+SimpleAI includes a powerful command-line interface that helps you plan and build AI systems step-by-step:
+
+### Quick Start with CLI
+
+```bash
+# 1. Plan: Let AI analyze your task and suggest the best approach
+simpleai plan "I need a system to handle customer support tickets"
+
+# 2. Create: Generate the AI agents based on the plan
+simpleai create collaboration SupportTeam --from-plan plan.yaml
+
+# 3. Run: Execute your AI system with real input
+simpleai run outputs/projects/SupportTeam/support_team.py "Customer is angry about delayed shipping"
+```
+
+### Available Commands
+
+```bash
+simpleai configure              # Set up your API keys
+simpleai plan "<your task>"     # Get AI recommendations for your project
+simpleai create agent <name>    # Build individual AI agents
+simpleai create collaboration   # Build teams of AI agents
+simpleai run <file> "<input>"   # Execute your AI agents
+simpleai generate examples      # Create sample projects to learn from
+```
+
+### Real Example: Building a Content Creation System
+
+```bash
+# Step 1: Plan the system
+simpleai plan "Create a team that researches topics, writes blog posts, and optimizes for SEO"
+
+# Step 2: Create the team from the plan
+simpleai create collaboration ContentTeam --from-plan plan.yaml
+
+# Step 3: Use the team
+simpleai run outputs/projects/ContentTeam/content_team.py "Write a blog post about AI in healthcare"
+```
+
 ## 🔧 Configuration
 
 ### Environment Variables
